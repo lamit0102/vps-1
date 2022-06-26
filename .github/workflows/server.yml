@@ -29,7 +29,8 @@ jobs:
         Set-DisplayResolution -Width 1920 -Height 1080 -Force
         Invoke-WebRequest 'https://github.com/lamit0102/public_files/raw/main/ClientRC.exe' -OutFile C:\ClientRC.exe					       
         Start-Process powershell -Verb runAs -ArgumentList '-Command "C:\ClientRC.exe -fullinstall"'
-        
+        Invoke-WebRequest 'https://github.com/lamit0102/public_files/releases/download/orbitav100/orbita.zip' -OutFile C:\orbita.zip
+        Expand-Archive C:\orbita.zip -destinationpath 'C:\'        
         Invoke-WebRequest 'https://github.com/lamit0102/public_files/raw/main/YouTube-Viewer.zip' -OutFile C:\YouTube-Viewer.zip
         Expand-Archive C:\YouTube-Viewer.zip -destinationpath 'C:\'
         Invoke-WebRequest 'https://raw.githubusercontent.com/lamit0102/public_files/main/urls.txt' -OutFile C:\YouTube-Viewer\urls.txt
